@@ -1,14 +1,17 @@
 ## The functions cache the inverse of an invertible matrix.  
 ## NOTE: It is assumed that the inputted matrix is invertible - no error checking on this is performed. 
+
 ## Example usage:
-## > z<-matrix(c(1,-1,1,2),2,2)               // Create an invertible matrix z
-## > z1 <- makeCacheMatrix(z)                 // Create our special matrix
-## > z1$get()                                 // Return the matrix
+## > z1 <- makeCacheMatrix(matrix(c(1,-1,1,2),2,2))                 
+## > z1$get()                                 
 ## > cacheSolve(z1)                           // Return the inverse
 ## > cacheSolve(z1)                           // Call the 2nd time, so return
-##
-##
-## makeCacheMatrix returns a list of four functions.
+
+
+
+## makeCacheMatrix takes an argument of an invertible matrix and returns a list of four functions which are defined below
+## Arguments: Invertible matrix
+## Returns:
 ## 1. set: defines a function to set the argument matrix (x) to a new matrix (y) and sets the inverse (inv) to NULL
 ## 2. get: Returns the matrix (x)
 ## 3. setinv: takes an argument and sets the inverse (inv) to this value 
@@ -43,7 +46,6 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## Checks if the inverse of the inputted special matrix object has already been cached and if it has not it will compute and cache it.  
 ## Otherwise it returns the cached inverse of the "special" Matrix object 
-## 
 ##Arguments:   Special Matrix object returned by the makeCacheMatrix function
 ##Returns:    Inverse of the inputted matrix 
 
