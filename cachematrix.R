@@ -2,10 +2,10 @@
 ## NOTE: It is assumed that the inputted matrix is invertible - no error checking on this is performed. 
 
 ## Example usage:
-## > z1 <- makeCacheMatrix(matrix(c(1,-1,1,2),2,2))                 
-## > z1$get()                                 
-## > cacheSolve(z1)                           // Return the inverse
-## > cacheSolve(z1)                           // Call the 2nd time, so return
+##  z1 <- makeCacheMatrix(matrix(c(1,-1,1,2),2,2))                 
+##  z1$get()                                 
+##  cacheSolve(z1)                           -- Return the inverse
+##  cacheSolve(z1)                           -- Call again to verify caching has occurred
 
 
 
